@@ -39,6 +39,7 @@ jobs:
         run: |
           df -hT $PWD
           git clone $REPO_URL -b $REPO_BRANCH bl-mt798x
+          ln -sf /workdir/bl-mt798x $GITHUB_WORKSPACE/bl-mt798x
 
       - name: Build the U-Boot
         id: compile
